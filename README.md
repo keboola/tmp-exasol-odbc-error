@@ -8,7 +8,9 @@ docker run \
 --mount type=bind,source="$(pwd)"/exasol.ini,target=/etc/exasol.ini \
 exa_odbc:latest
 
+# fill exasol.ini file
 # in container run
+# this will work fine and connect to Exasol server
 odbcinst -i -s -l -f /etc/exasol.ini
 odbcinst -q -s -f /etc/exasol.ini
 isql -v sass
@@ -20,5 +22,8 @@ docker run \
 exa_odbc:latest
 
 # in container run
+# fill connect.php file
+# this will fail with  
+# odbc_connect(): SQL error: [EXASOL][EXASolution driver]Failed to resolve hostname: 'y'., SQL state 08S01 in SQLConnect in /tmp/connect.php on line 10
 php /tmp/connect.php
 ```
