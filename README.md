@@ -27,3 +27,7 @@ exa_odbc:latest
 # odbc_connect(): SQL error: [EXASOL][EXASolution driver]Failed to resolve hostname: 'y'., SQL state 08S01 in SQLConnect in /tmp/connect.php on line 10
 php /tmp/connect.php
 ```
+
+## License
+
+MIT licensed, see [LICENSE](./LICENSE) file.
